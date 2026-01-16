@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Robots.txt Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🤖 Robots.txt Generator</h1>
+  <p>Create SEO-friendly robots.txt file for your website</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Allow All Search Engines</label>
+  <select id="robotsAllow">
+    <option value="allow">Allow</option>
+    <option value="disallow">Disallow</option>
+  </select>
+
+  <label>Disallow Paths (optional)</label>
+  <textarea id="robotsPaths" rows="4"
+    placeholder="/admin
+/private
+/cgi-bin"></textarea>
+
+  <label>Sitemap URL (optional)</label>
+  <input type="text" id="robotsSitemap"
+    placeholder="https://example.com/sitemap.xml">
+
+  <button class="primary-btn" onclick="generateRobots()">
+    Generate Robots.txt
+  </button>
+
+  <label>Generated robots.txt</label>
+  <textarea id="robotsOutput" rows="8"
+    placeholder="robots.txt content will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('robotsOutput')">
+    Copy Robots.txt
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meta Tag Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🏷️ Meta Tag Generator</h1>
+  <p>Create SEO-friendly meta tags for your website</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Page Title</label>
+  <input type="text" id="metaTitle" placeholder="Enter SEO title (50–60 characters)">
+
+  <label>Meta Description</label>
+  <textarea id="metaDescription" rows="4"
+    placeholder="Enter meta description (150–160 characters)"></textarea>
+
+  <label>Meta Keywords (comma separated)</label>
+  <input type="text" id="metaKeywords"
+    placeholder="keyword1, keyword2, keyword3">
+
+  <button class="primary-btn" onclick="generateMetaTags()">
+    Generate Meta Tags
+  </button>
+
+  <label>Generated Meta Tags (HTML)</label>
+  <textarea id="metaOutput" rows="8"
+    placeholder="Your meta tags will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('metaOutput')">
+    Copy Meta Tags
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Auto Keyword Hyperlink Tool</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🔗 Auto Keyword Hyperlink Inserter</h1>
+  <p>Automatically add SEO links inside long content</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Paste Article Content</label>
+  <textarea id="akContent" rows="10"
+    placeholder="Paste 500–2000+ word article here"></textarea>
+
+  <label>Keywords + URLs (one per line)</label>
+  <textarea id="akKeywords" rows="5"
+    placeholder="Mumbai Escort|https://example.com
+VIP Call Girls|https://example.com/vip"></textarea>
+
+  <label>OR Upload Excel (Keyword | URL)</label>
+  <input type="file" id="akExcel" accept=".xlsx,.csv">
+
+  <label>Link Type</label>
+  <select id="akRel">
+    <option value="">DoFollow</option>
+    <option value="nofollow">NoFollow</option>
+  </select>
+
+  <label>Link Rule</label>
+  <select id="akRule">
+    <option value="first">First Occurrence Only (Recommended)</option>
+    <option value="all">All Occurrences</option>
+  </select>
+
+  <label>Max Links Per Keyword</label>
+  <input type="number" id="akLimit" value="1" min="1">
+
+  <button class="primary-btn" onclick="autoKeywordLinkPro()">
+    Generate Linked Content
+  </button>
+
+  <label>Final SEO Content (HTML)</label>
+  <textarea id="akOutput" rows="10"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('akOutput')">
+    Copy Final Content
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Schema Markup Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🧩 Schema Markup Generator</h1>
+  <p>Select schema type & generate JSON-LD for Google Rich Results</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Select Schema Type</label>
+  <select id="schemaType" onchange="loadSchemaFields()">
+    <option value="">-- Select Schema --</option>
+    <option value="Article">Article / BlogPosting</option>
+    <option value="Product">Product</option>
+    <option value="Service">Service</option>
+    <option value="LocalBusiness">Local Business</option>
+    <option value="Organization">Organization</option>
+    <option value="Person">Person</option>
+    <option value="FAQ">FAQ</option>
+    <option value="HowTo">HowTo</option>
+    <option value="Review">Review / Rating</option>
+    <option value="Event">Event</option>
+    <option value="JobPosting">Job Posting</option>
+    <option value="Video">Video</option>
+    <option value="Breadcrumb">Breadcrumb</option>
+    <option value="Website">Website + Sitelinks Search</option>
+  </select>
+
+  <div id="schemaFields"></div>
+
+  <button class="primary-btn" onclick="generateSchema()">
+    Generate Schema
+  </button>
+
+  <label>Generated Schema (JSON-LD)</label>
+  <textarea id="schemaOutput" rows="10"
+    placeholder="Schema JSON-LD will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('schemaOutput')">
+    Copy Schema
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

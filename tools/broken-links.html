@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Broken Link Checker</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<div class="ads-box">Adsense Ad</div>
+<body>
+
+<div class="tool-header">
+  <h1>❌ Broken Link Checker</h1>
+  <p>Find broken (404) links on any webpage for FREE</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Enter Page URL</label>
+  <input type="text" id="brokenUrl"
+    placeholder="https://example.com/page">
+
+  <button class="primary-btn" onclick="checkBrokenLinks()">
+    Check Broken Links
+  </button>
+
+  <label>Broken Link Report</label>
+  <textarea id="brokenOutput" rows="12"
+    placeholder="Broken links will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('brokenOutput')">
+    Copy Report
+  </button>
+
+  <p class="tool-note">
+    ⚠️ Some websites block scanning due to security (CORS).
+    Best for your own or allowed websites.
+  </p>
+
+</div>
+<footer class="main-footer">Free SEO Tools</footer>
+<script src="tools.js"></script>
+</body>
+</html>

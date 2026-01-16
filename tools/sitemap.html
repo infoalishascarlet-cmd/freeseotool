@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XML Sitemap Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🗺️ XML Sitemap Generator</h1>
+  <p>Enter URLs (one per line) & generate XML sitemap</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Enter URLs (one per line)</label>
+  <textarea id="sitemapInput" rows="8" placeholder="https://example.com/"></textarea>
+
+  <button class="primary-btn" onclick="generateSitemap()">
+    Generate Sitemap
+  </button>
+
+  <label>XML Sitemap Output</label>
+  <textarea id="sitemapOutput" rows="10" placeholder="XML sitemap will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('sitemapOutput')">
+    Copy Sitemap
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

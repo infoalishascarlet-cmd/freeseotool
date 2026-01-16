@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Keyword Density Checker</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>📊 Keyword Density Checker</h1>
+  <p>Paste article text & check density of up to 5 keywords</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Paste Article Text</label>
+  <textarea id="articleText" rows="10"
+    placeholder="Paste your full article content here..."></textarea>
+
+  <label>Enter Keywords (minimum 1, max 5)</label>
+
+  <input type="text" id="kw1" placeholder="Keyword 1">
+  <input type="text" id="kw2" placeholder="Keyword 2">
+  <input type="text" id="kw3" placeholder="Keyword 3">
+  <input type="text" id="kw4" placeholder="Keyword 4">
+  <input type="text" id="kw5" placeholder="Keyword 5">
+
+  <button class="primary-btn" onclick="checkKeywordDensity()">
+    Check Density
+  </button>
+
+  <label>Keyword Density Result</label>
+  <textarea id="densityOutput" rows="8"
+    placeholder="Keyword density result will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('densityOutput')">
+    Copy Result
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

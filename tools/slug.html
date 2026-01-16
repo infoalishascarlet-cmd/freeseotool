@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SEO Slug Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🔗 SEO Slug Generator</h1>
+  <p>Generate clean, SEO-friendly URL slugs</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Enter Title / Text</label>
+  <input type="text" id="slugInput"
+    placeholder="Enter page title or keyword">
+
+  <button class="primary-btn" onclick="generateSlug()">
+    Generate Slug
+  </button>
+
+  <label>SEO Friendly URL Slug</label>
+  <input type="text" id="slugOutput"
+    placeholder="seo-friendly-url-slug">
+
+  <button class="secondary-btn" onclick="copyText('slugOutput')">
+    Copy Slug
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

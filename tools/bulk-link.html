@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SEO Bulk Hyperlink Generator</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="tool-header">
+  <h1>🔗 SEO Bulk Hyperlink Generator</h1>
+  <p>Upload Excel / CSV & generate DoFollow or NoFollow links</p>
+</div>
+
+<!-- TOOL CARD -->
+<div class="tool-card">
+
+  <label>Upload Excel / CSV File</label>
+  <input type="file" id="excelFile" accept=".xlsx,.csv">
+
+  <label>Link Type</label>
+  <select id="linkType">
+    <option value="dofollow">DoFollow</option>
+    <option value="nofollow">NoFollow</option>
+  </select>
+
+  <button class="primary-btn" onclick="generateFromExcel()">
+    Generate Links
+  </button>
+
+  <label>All Generated SEO Links (HTML)</label>
+  <textarea id="allLinks" rows="10" placeholder="Generated links will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('allLinks')">
+    Copy All Links
+  </button>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>

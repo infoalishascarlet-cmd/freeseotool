@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Free Backlink Checker</title>
+
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+
+<div class="tool-header">
+  <h1>🔍 Free Backlink Checker</h1>
+  <p>Check external backlinks from any webpage (FREE)</p>
+</div>
+
+<div class="tool-card">
+
+  <label>Enter Page URL</label>
+  <input type="text" id="backlinkUrl"
+    placeholder="https://example.com/page">
+
+  <button class="primary-btn" onclick="checkBacklinks()">
+    Check Backlinks
+  </button>
+
+  <label>Backlink Results</label>
+  <textarea id="backlinkOutput" rows="10"
+    placeholder="Backlinks will appear here"></textarea>
+
+  <button class="secondary-btn" onclick="copyText('backlinkOutput')">
+    Copy Results
+  </button>
+
+  <p class="tool-note">
+    ⚠️ Note: Some websites block fetching due to security (CORS).
+    For best results, check your own or allowed websites.
+  </p>
+
+</div>
+
+<script src="tools.js"></script>
+</body>
+</html>
